@@ -182,15 +182,14 @@ header {
 .default .section-body {
     max-width: 1140px;
     margin: auto;
-    background-color: #ccc;
-    min-height: 100px;
 }
 
 .default.light {
     background-color: #f7f7f7;
 }
 
-.default.light .section-tittle {
+.default.light .section-tittle,
+.default.light .section-body {
     color: black;
 }
 
@@ -198,6 +197,180 @@ header {
     background-color: black;
 }
 
-.default.dark .section-tittle {
+.default.dark .section-tittle,
+.default.dark .section-body {
     color: white ;
+}
+
+.button {
+    display: inline-block;
+    background-color: #B28756;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Area Específica */
+
+.section-aboutus {
+    display: flex;
+}
+
+.section-aboutus--left 
+{
+    flex: 1;
+}
+
+.section-aboutus--right {
+    width: 520px;
+    text-align: center;
+
+}
+
+.section-aboutus--right img {
+    width: 480px;
+    box-shadow: 0px 5px 10px #333;
+}
+
+.section-aboutus--left p {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.section-services {
+    display: flex;
+}
+
+.section-service {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #333;
+    padding: 15px;
+}
+
+.section-service:first-child {
+    border-left: 1px solid #333;
+}
+
+.section-service h4 {
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.section-service p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #999;
+}
+
+
+
+
+
+
+.section-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.section-projects--filters {
+    border: 1px solid #ccc;
+    background-color: #eee;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.section-projects--filters ul,
+.section-projects--filters li {
+    list-style: none;
+}
+
+.section-projects--filters li{
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-left: 1px solid #ccc;
+    color: #555;
+    border-bottom: 3px solid #eee;
+    cursor: pointer;
+}
+
+.section-projects--filters li:hover,
+.section-projects--filters li.active{
+    border-bottom: 3px solid #B28756;
+}
+
+.section-projects--filters li:first-child {
+    border-left: 0px;
+}
+
+.section-projects--photos {
+    width: 100vw;
+    max-width: 1140px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section-projects--photo {
+    width: 280px;
+
+}
+
+.section-projects--photoarea {
+    margin: 10px;
+    width: 260px;
+    height: 160px;
+}
+
+.section-projects--photoarea img {
+    width: inherit;
+    height: inherit;
+}
+
+.section-projects--photoinfo {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: inherit;
+    height: inherit;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #FFF;
+}
+
+.section-projects--photoinfo h5 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.section-projects--photoarea:hover .section-projects--photoinfo {
+    display: flex;
 }
